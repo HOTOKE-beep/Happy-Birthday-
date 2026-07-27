@@ -111,7 +111,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Floating hearts animation */
+    /* Floating elements animation */
     .heart {
       position: fixed;
       color: var(--accent-color);
@@ -131,11 +131,10 @@
 <body>
 
   <div class="container">
-    <h1>Happy Birthday, Jasmine! 🎉</h1>
+    <h1>Happy Birthday, Jasmine! 🌸</h1>
     <p class="subtitle">To someone truly special ✨</p>
 
     <div class="photo-frame">
-      <!-- Replace with your photo URL or image filename -->
       <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600" alt="Jasmine's Birthday Photo">
     </div>
 
@@ -146,7 +145,7 @@
     <button class="btn" onclick="showSurprise()">Click for a surprise 🎁</button>
 
     <div class="surprise-content" id="surprise">
-      <p>💖 <strong>Special Wish for Jasmine:</strong> May every single dream, project, and goal you work on this year bring you absolute joy and success!</p>
+      <p>🌸 <strong>Special Wish for Jasmine:</strong> May every single dream, project, and goal you work on this year bring you absolute joy and success!</p>
     </div>
   </div>
 
@@ -156,11 +155,10 @@
       surpriseBox.style.display = 'block';
     }
 
-    // Create floating hearts dynamically
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
-      heart.innerText = '💖';
+      heart.innerText = '🌸';
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.animationDuration = Math.random() * 2 + 3 + 's';
       document.body.appendChild(heart);
