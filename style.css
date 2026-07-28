@@ -567,3 +567,89 @@ button:hover {
     animation: fade 1s ease;
 
 }
+/* =========================
+   Final Scene 🖤
+========================= */
+
+#final-screen {
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050505;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10000;
+
+}
+
+
+.final-content {
+
+    width:85%;
+
+    max-width:500px;
+
+    text-align:center;
+
+    color:white;
+
+    animation:zoomIn 3s ease;
+
+}
+
+
+.final-content h1 {
+
+    font-family:"Cinzel",serif;
+
+    font-size:40px;
+
+    color:#ffb7d5;
+
+}
+
+
+.final-content p {
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+#final-screen.show {
+
+    display:flex;
+
+}
+
+
+@keyframes zoomIn {
+
+    from{
+
+        transform:scale(0.5);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
