@@ -1,1 +1,360 @@
 
+/* ===================================
+   HOTOKE V2 - Jasmine Cinematic Website
+   Main Styling
+=================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   Background Effects
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 40%),
+        linear-gradient(180deg, #000000, #090909);
+    z-index: -2;
+}
+
+
+/* =========================
+   Sakura Petals
+========================= */
+
+.petal {
+    position: fixed;
+    top: -20px;
+    width: 15px;
+    height: 15px;
+    background: #ffb7d5;
+    border-radius: 100% 0 100% 0;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    z-index: 5;
+}
+
+@keyframes fall {
+
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+
+/* =========================
+   Glass Card
+========================= */
+
+.card {
+
+    width: 90%;
+    max-width: 500px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 25px;
+
+    box-shadow:
+    0 0 40px rgba(255,255,255,0.08);
+
+    animation: appear 1.5s ease;
+
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+/* =========================
+   Heading
+========================= */
+
+.title {
+
+    font-size: 42px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+    background:
+    linear-gradient(90deg,#fff,#ff9acb);
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.subtitle {
+
+    font-size:16px;
+
+    color:#cccccc;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* =========================
+   Image Section
+========================= */
+
+.profile {
+
+    width:200px;
+
+    height:200px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:3px solid rgba(255,255,255,0.5);
+
+    box-shadow:
+    0 0 30px rgba(255,150,200,0.4);
+
+    animation:pulse 3s infinite;
+
+}
+
+
+
+@keyframes pulse {
+
+    50% {
+
+        box-shadow:
+        0 0 60px rgba(255,150,200,0.7);
+
+    }
+
+}
+
+
+
+/* =========================
+   Button
+========================= */
+
+
+button {
+
+    margin-top:25px;
+
+    padding:13px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:white;
+
+    color:black;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+}
+
+
+button:hover {
+
+    transform:scale(1.1);
+
+    background:#ffb7d5;
+
+}
+
+
+
+/* =========================
+   Hidden Message
+========================= */
+
+.message {
+
+    margin-top:25px;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    color:#eeeeee;
+
+    display:none;
+
+    animation:fade 1s;
+
+}
+
+
+
+.message.show {
+
+    display:block;
+
+}
+
+
+
+@keyframes fade {
+
+    from {
+
+        opacity:0;
+
+    }
+
+    to {
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* =========================
+   Music Button
+========================= */
+
+
+.music-btn {
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+    color:black;
+
+    font-size:22px;
+
+    z-index:10;
+
+}
+
+
+
+/* =========================
+   Mobile
+========================= */
+
+
+@media(max-width:600px){
+
+
+.title {
+
+    font-size:32px;
+
+}
+
+
+.card {
+
+    padding:25px;
+
+}
+
+
+.profile {
+
+    width:160px;
+
+    height:160px;
+
+}
+
+
+.subtitle {
+
+    font-size:14px;
+
+}
+
+
+}
