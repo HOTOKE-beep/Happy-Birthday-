@@ -130,23 +130,32 @@ musicBtn.addEventListener("click",()=>{
 
 function startExperience(){
 
-    const music =
-    document.getElementById("music");
-
-    const opening =
-    document.getElementById("opening-screen");
+    const music = document.getElementById("music");
+    const opening = document.getElementById("opening-screen");
 
 
-    if(music){
+    // Hide opening screen
+    if(opening){
 
-        music.play();
+        opening.classList.add("hide");
 
     }
 
 
-    if(opening){
+    // Start music
+    if(music){
 
-        opening.classList.add("hide");
+        music.play()
+        .then(()=>{
+
+            console.log("Music started");
+
+        })
+        .catch(()=>{
+
+            console.log("Music permission required");
+
+        });
 
     }
 
