@@ -236,9 +236,85 @@ function nextWish(){
 
     else{
 
-        text.innerHTML =
-        "One last surprise awaits... 🌸";
+    showFinalScene();
 
     }
+
+}
+/* =========================
+   Final Scene Typewriter 🎬
+========================= */
+
+function showFinalScene(){
+
+    const wishes =
+    document.getElementById("wishes-screen");
+
+    const final =
+    document.getElementById("final-screen");
+
+
+    if(wishes){
+
+        wishes.style.display="none";
+
+    }
+
+
+    if(final){
+
+        final.classList.add("show");
+
+    }
+
+
+    typeWriter(
+        "final-title",
+        "Happy Birthday Jasmine 🌸",
+        100
+    );
+
+
+    setTimeout(()=>{
+
+        typeWriter(
+            "final-message",
+            "May your life always be filled with happiness ✨\n\nOoh... Happy Birthday to your brother too 😄\n\nMade by HOTOKE 🖤",
+            70
+        );
+
+    },2500);
+
+}
+
+
+
+function typeWriter(id,text,speed){
+
+    let i = 0;
+
+    const element =
+    document.getElementById(id);
+
+
+    element.innerHTML = "";
+
+
+    function typing(){
+
+        if(i < text.length){
+
+            element.innerHTML += text.charAt(i);
+
+            i++;
+
+            setTimeout(typing,speed);
+
+        }
+
+    }
+
+
+    typing();
 
 }
