@@ -175,3 +175,70 @@ window.addEventListener("load",()=>{
 
 
 });
+/* =========================
+   Wishes Scene 💌
+========================= */
+
+const wishes = [
+
+    "Happy Birthday Jasmine 🌸 I hope your day is filled with joy and everything you have been wishing for.",
+
+    "May every new chapter of your life bring happiness, peace and beautiful memories ✨",
+
+    "Keep smiling, keep shining and always stay the amazing person you are 🖤",
+
+    "May this year bring you endless reasons to smile 🌸"
+
+];
+
+
+let wishIndex = 0;
+
+
+
+function showWishes(){
+
+    const screen = document.getElementById("wishes-screen");
+
+    const text = document.getElementById("wish-text");
+
+
+    if(screen){
+
+        screen.classList.add("show");
+
+    }
+
+
+    if(text){
+
+        text.innerHTML = wishes[wishIndex];
+
+    }
+
+}
+
+
+
+function nextWish(){
+
+    wishIndex++;
+
+
+    const text = document.getElementById("wish-text");
+
+
+    if(wishIndex < wishes.length){
+
+        text.innerHTML = wishes[wishIndex];
+
+    }
+
+    else{
+
+        text.innerHTML =
+        "One last surprise awaits... 🌸";
+
+    }
+
+}
