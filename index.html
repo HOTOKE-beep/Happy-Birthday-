@@ -1,175 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Jasmine!</title>
-  <style>
-    :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --accent-color: #ff4b72;
-      --text-color: #f8fafc;
-      --subtext-color: #94a3b8;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    <title>Happy Birthday Jasmine 🖤</title>
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      overflow-x: hidden;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    .container {
-      max-width: 600px;
-      width: 100%;
-      background: var(--card-bg);
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.1);
-      z-index: 10;
-      position: relative;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    h1 {
-      font-size: 2.5rem;
-      color: var(--accent-color);
-      margin-bottom: 10px;
-    }
-
-    p.subtitle {
-      color: var(--subtext-color);
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
-
-    .photo-frame {
-      width: 100%;
-      max-height: 350px;
-      border-radius: 15px;
-      overflow: hidden;
-      margin-bottom: 25px;
-      border: 3px solid var(--accent-color);
-    }
-
-    .photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .message-box {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 25px;
-      text-align: left;
-    }
-
-    .btn {
-      background: var(--accent-color);
-      color: #fff;
-      border: none;
-      padding: 12px 28px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      background: #e03a5f;
-    }
-
-    .surprise-content {
-      display: none;
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px dashed var(--subtext-color);
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Floating elements animation */
-    .heart {
-      position: fixed;
-      color: var(--accent-color);
-      font-size: 20px;
-      user-select: none;
-      pointer-events: none;
-      animation: float 4s linear infinite;
-      z-index: 1;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
-    }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Happy Birthday, Jasmine! 🌸</h1>
-    <p class="subtitle">To someone truly special ✨</p>
+    <!-- Loading Screen -->
 
-    <div class="photo-frame">
-      <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600" alt="Jasmine's Birthday Photo">
+    <div id="loading-screen">
+
+        <h1>For Someone Special...</h1>
+
+        <p>Loading memories ✨</p>
+
     </div>
 
-    <div class="message-box">
-      <p>Wishing you the happiest of birthdays today, Jasmine! May your year ahead be full of endless laughter, incredible adventures, and everything you've been wishing for. Thank you for being such an awesome person!</p>
-    </div>
+    <!-- Floating Petals -->
 
-    <button class="btn" onclick="showSurprise()">Click for a surprise 🎁</button>
+    <div id="petals"></div>
 
-    <div class="surprise-content" id="surprise">
-      <p>🌸 <strong>Special Wish for Jasmine:</strong> May every single dream, project, and goal you work on this year bring you absolute joy and success!</p>
-    </div>
-  </div>
+    <!-- Main Card -->
 
-  <script>
-    function showSurprise() {
-      const surpriseBox = document.getElementById('surprise');
-      surpriseBox.style.display = 'block';
-    }
+    <main class="card">
 
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerText = '🌸';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = Math.random() * 2 + 3 + 's';
-      document.body.appendChild(heart);
+        <h1>
+            Happy Birthday
+            <span>Jasmine 🌸</span>
+        </h1>
 
-      setTimeout(() => {
-        heart.remove();
-      }, 5000);
-    }
+        <p class="subtitle">
 
-    setInterval(createHeart, 300);
-  </script>
+            Wishing you a year filled with peace,
+            happiness and beautiful memories.
+
+        </p>
+
+        <div class="photo">
+
+            <img src="jasmine.jpg" alt="Jasmine">
+
+        </div>
+
+        <div class="message">
+
+            <p id="typing"></p>
+
+        </div>
+
+        <button onclick="playMusic()">
+
+            🖤 Play Music
+
+        </button>
+
+        <button onclick="showSurprise()">
+
+            🌸 One Last Surprise
+
+        </button>
+
+        <div id="surprise">
+
+            <h2>Happy Birthday 🌸</h2>
+
+            <p>
+
+                May every dream you chase
+                find its way to you.
+
+                Stay happy.
+
+                Keep smiling.
+
+                Never stop being yourself.
+
+                Have a beautiful year ahead.
+
+                🖤
+
+            </p>
+
+        </div>
+
+    </main>
+
+    <audio id="music">
+
+        <source src="maula-mere-maula.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <footer>
+
+        Made with 🖤 by HOTOKE
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
