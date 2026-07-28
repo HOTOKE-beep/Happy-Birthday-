@@ -125,6 +125,36 @@ musicBtn.addEventListener("click",()=>{
 
 
 /* =========================
+   Opening Screen Start 🌸
+========================= */
+
+function startExperience(){
+
+    const music =
+    document.getElementById("music");
+
+    const opening =
+    document.getElementById("opening-screen");
+
+
+    if(music){
+
+        music.play();
+
+    }
+
+
+    if(opening){
+
+        opening.classList.add("hide");
+
+    }
+
+}
+
+
+
+/* =========================
    Smooth Entrance
 ========================= */
 
