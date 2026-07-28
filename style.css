@@ -491,3 +491,79 @@ button:hover {
     }
 
 }
+/* =========================
+   Wishes Scene 💌
+========================= */
+
+#wishes-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #050505,
+        #1a1a1a
+    );
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9998;
+
+}
+
+
+.wishes-content {
+
+    width: 85%;
+
+    max-width: 500px;
+
+    text-align: center;
+
+    color: white;
+
+    animation: fade 1s ease;
+
+}
+
+
+.wishes-content h2 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: 32px;
+
+    color: #ffb7d5;
+
+    margin-bottom: 30px;
+
+}
+
+
+#wish-text {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    min-height: 120px;
+
+    color: #eeeeee;
+
+}
+
+
+#wishes-screen.show {
+
+    display: flex;
+
+    animation: fade 1s ease;
+
+}
